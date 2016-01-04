@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "angular": "~1.4.8",
+    "angular-mocks": "~1.4.8",
     "bootstrap": "~3.3.5",
     "angular-bootstrap": "~0.13.4",
     "angular-ui-router": "~0.2.15",
@@ -29,8 +30,5 @@
     "fontawesome": "~4.4.0",
     "angular-recaptcha": "~2.2.5",
     "angulartics": "~0.20.2"
-  },
-  "devDependencies": {
-    "angular-mocks": "~1.4.8"
   }
 }
