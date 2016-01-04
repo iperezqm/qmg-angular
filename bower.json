@@ -1,0 +1,36 @@
+{
+  "name": "qmg-angular",
+  "description": "QMG Angular commonalities",
+  "main": "index.js",
+  "authors": [
+    "Isma Perez <iperez@qmetric.co.uk>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/iperezqm/qmg-angular",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bin",
+    "grunt",
+    "skel",
+    "gruntfile-utils.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.13.4",
+    "angular-ui-router": "~0.2.15",
+    "angular-messages": "~1.4.6",
+    "angular-momentjs": "~0.2.2",
+    "angular-ui-mask": "~1.4.7",
+    "core.js": "~1.1.4",
+    "fontawesome": "~4.4.0",
+    "angular-recaptcha": "~2.2.5",
+    "angulartics": "~0.20.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.8"
+  }
+}
