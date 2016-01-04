@@ -16,7 +16,7 @@
     "url": "https://github.com/iperezqm/qmg-angular/issues"
   },
   "homepage": "https://github.com/iperezqm/qmg-angular#readme",
-  "devDependencies": {
+  "peerDependencies": {
     "babel-eslint": "^4.1.0",
     "babelify": "^6.2.0",
     "bower": "^1.6.3",
