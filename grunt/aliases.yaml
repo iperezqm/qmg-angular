@@ -1,0 +1,97 @@
+default:
+  - "build"
+  - "test"
+  - "clean:release"
+
+prepare_build:
+  - "eslint:app"
+  - "clean:output"
+  - "template"
+  - "copy:dist"
+  - "concat:dependencies"
+  - "babel:mocks"
+  - "sprite"
+  - "less"
+  - "ngtemplates"
+
+build:
+  - "prepare_build"
+  - "browserify:dist"
+
+test:
+  - "unit"
+  - "e2e"
+
+test_ci:
+  - "unit_ci"
+  - "e2e_ci"
+
+unit:
+  - "build_unit"
+  - "mocha:dev"
+
+unit_ci:
+  - "build_unit"
+  - "mocha:ci"
+
+build_unit:
+  - "eslint:unit"
+  - "clean:unit"
+  - "babel:unit"
+  - "concat:unit"
+  - "template:unit"
+
+e2e:
+  - "build_e2e"
+  - "babel:dyson"
+  - "freeport"
+  - "run:dyson_test"
+  - "run:service"
+  - "protractor:dev"
+  - "stop:dyson_test"
+  - "stop:service"
+
+e2e_ci:
+  - "build_e2e"
+  - "babel:dyson"
+  - "freeport"
+  - "run:dyson_ci"
+  - "run:service"
+  - "protractor:ci"
+  - "stop:dyson_ci"
+  - "stop:service"
+
+e2e_watch:
+  - "build_e2e"
+  - "babel:dyson"
+  - "freeport"
+  - "run:dyson_test"
+  - "run:service"
+  - "protractor:watch"
+  - "stop:dyson_test"
+  - "stop:service"
+
+build_e2e:
+  - "eslint:e2e"
+  - "clean:e2e"
+  - "babel:e2e"
+
+dyson:
+  - "clean:dyson"
+  - "babel:dyson"
+  - "run:dyson:keepalive"
+
+coverage:
+  - "prepare_build"
+  - "instrument"
+  - "browserify:instrumented"
+  - "unit_ci"
+  - "build_e2e"
+  - "babel:dyson"
+  - "freeport"
+  - "run:dyson_ci"
+  - "run:service_coverage"
+  - "protractor_coverage:ci"
+  - "stop:dyson_ci"
+  - "stop:service_coverage"
+  - "makeReport"

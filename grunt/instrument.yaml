@@ -1,0 +1,6 @@
+options:
+  lazy: true
+  basePath: "coverage"
+
+files:
+  - "./app/js/**/*.js"

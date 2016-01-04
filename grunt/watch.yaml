@@ -1,0 +1,56 @@
+options:
+    interrupt: false
+    debounceDelay: 500
+
+index:
+    files:
+        - "index.html.tpl"
+    tasks:
+        - "notify:watchstart"
+        - "template:index.html"
+        - "notify:watchsuccess"
+
+source:
+    files:
+        - "app/**/*"
+    tasks:
+        - "notify:watchstart"
+        - "build"
+        - "unit"
+        - "e2e_watch"
+        - "notify:watchsuccess"
+
+unit:
+    files:
+        - "test/unit/**/*.js"
+        - "!test/unit/dist/**/*"
+    tasks:
+        - "notify:watchstart"
+        - "unit"
+        - "notify:watchsuccess"
+
+e2e:
+    files:
+        - 'test/e2e/**/*.js'
+        - "!test/e2e/dist/**/*"
+    tasks:
+        - "notify:watchstart"
+        - "e2e_watch"
+        - "notify:watchsuccess"
+
+less:
+    files:
+        - "less/**/*.less"
+    tasks:
+        - "notify:watchstart"
+        - "sprite"
+        - "less"
+        - "notify:watchsuccess"
+config:
+    files:
+        - "config.tpl"
+    tasks:
+        - "notify:watchstart"
+        - "build"
+        - "test"
+        - "notify:watchsuccess"

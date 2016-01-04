@@ -1,0 +1,20 @@
+output:
+  - "dist"
+  - "config.js"
+  - "config.template"
+  - "coverage"
+
+unit:
+  - "test/dist/unit"
+
+e2e:
+  - "test/dist/e2e"
+  - "dist/index-e2e.html"
+  - "test/failures"
+
+release:
+  - "dist/index-e2e.html"
+  - "dist/js/mocks.js"
+
+dyson:
+  - "test/dist/dyson"

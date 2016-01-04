@@ -1,0 +1,7 @@
+options:
+  type: "lcov"
+  dir: "coverage/reports"
+  print: "summary"
+
+src:
+  - "coverage/*/coverage.json"

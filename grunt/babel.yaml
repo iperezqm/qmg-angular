@@ -1,0 +1,39 @@
+unit:
+  options:
+    sourceMap: true
+  files:
+      - expand: true
+        cwd: 'test/unit'
+        src:
+          - '**/*.js'
+        dest: './test/dist/unit'
+
+e2e:
+  options:
+    sourceMap: true
+  files:
+    - expand: true
+      cwd: 'test/e2e'
+      src:
+        - '**/*.js'
+      dest: './test/dist/e2e'
+
+dyson:
+  options:
+    sourceMap: true
+  files:
+    - expand: true
+      cwd: 'dyson'
+      src:
+        - '**/*.js'
+      dest: './test/dist/dyson'
+
+mocks:
+  options:
+    sourceMap: true
+  files:
+    - expand: true
+      cwd: 'test/e2e'
+      src:
+        - 'mocks.js'
+      dest: './test/dist/e2e/'

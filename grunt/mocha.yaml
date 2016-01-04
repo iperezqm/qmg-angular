@@ -1,0 +1,16 @@
+ci: &CI
+  src:
+    - './test/unit/index.html'
+  options: &CI_OPTIONS
+    run: true
+    reporter: 'mocha-teamcity-reporter'
+    coverage:
+      jsonReport: "coverage/unit"
+
+dev:
+  <<: *CI
+  options:
+    <<: *CI_OPTIONS
+    log: true
+    logErrors: true
+    reporter: 'Dot'

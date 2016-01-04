@@ -1,0 +1,14 @@
+dyson:
+  options:
+    start: 3002
+    end: 3050
+
+service:
+  options:
+    start: 7906
+    end: 7955
+
+serviceAdmin:
+  options:
+    start: 7956
+    end: 8005

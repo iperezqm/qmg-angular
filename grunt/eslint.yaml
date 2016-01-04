@@ -1,0 +1,17 @@
+app:
+  src:
+    - "app/**/*.js"
+  options:
+    configFile: ".eslintrc"
+
+e2e:
+  src:
+    - "test/e2e/**/*.js"
+  options:
+    configFile: ".eslintrc"
+
+unit:
+  src:
+    - "test/unit/**/*.js"
+  options:
+    configFile: ".eslintrc"

@@ -1,0 +1,20 @@
+dist:
+  files:
+    - src:
+        - "./index.html"
+      dest: "./dist/index.html"
+
+    - src:
+        - "./bower_components/bootstrap/dist/fonts/**/*"
+        - "./fonts/**/*"
+        - "./bower_components/fontawesome/fonts/**/*"
+      dest: "./dist/fonts"
+      filter: "isFile"
+      expand: true
+      flatten: true
+
+    - src: "./ping"
+      dest: "./dist/ping"
+
+    - src: "./node_modules/mockdate/src/mockdate.js"
+      dest: "./dist/js/mockdate.js"

@@ -1,0 +1,28 @@
+options:
+  configFile: "protractor_conf.js"
+  keepAlive: false
+  noColor: false
+
+dev:
+  options:
+    args: &DEFAULT_ARGS
+      baseUrl: "http://localhost:<%= freeport.service %>/"
+      capabilities:
+        browserName: "chrome"
+      params:
+        dysonPort: '<%= freeport.dyson %>'
+
+watch:
+  options:
+    args: &PHANTOM_ARGS
+      <<: *DEFAULT_ARGS
+      capabilities:
+        browserName: "phantomjs"
+        phantomjs.binary.path: "./run_phantomjs"
+
+ci:
+  options:
+    args:
+      <<: *PHANTOM_ARGS
+      mochaOpts:
+        reporter: "mocha-teamcity-reporter"

@@ -1,0 +1,14 @@
+dist: &DIST
+  src:
+    - "./app/js/**/*.js"
+  dest: "./dist/js/app.js"
+  options:
+    browserifyOptions:
+        debug: true
+    transform:
+      - "babelify"
+
+instrumented:
+  <<: *DIST
+  src:
+    - "./coverage/app/js/**/*.js"
