@@ -28,7 +28,6 @@
     "angular-ui-mask": "~1.4.7",
     "core.js": "~1.1.4",
     "fontawesome": "~4.4.0",
-    "angular-recaptcha": "~2.2.5",
     "angulartics": "~0.20.2"
   }
 }
