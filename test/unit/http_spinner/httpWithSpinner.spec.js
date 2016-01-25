@@ -9,6 +9,14 @@ describe('httpWithSpinner', () => {
     var finallyCallback;
 
     beforeEach(() => {
+        angular.module('QMetric.test', []).service('$modal', () => ({
+            open: () => {}
+        }));
+    });
+
+    beforeEach(module('QMetric.httpWithSpinner'));
+
+    beforeEach(() => {
         inject((_httpWithSpinner_, _$http_, _$modal_) => {
             httpWithSpinner = _httpWithSpinner_;
             $http = _$http_;

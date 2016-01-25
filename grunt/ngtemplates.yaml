@@ -1,0 +1,8 @@
+options:
+  module: "QMetric.common.templates"
+
+app:
+  cwd: "./angular-modules"
+  src: "**/*.tpl.html"
+  dest: "./dist/js/templates.js"
+  standalone: true
