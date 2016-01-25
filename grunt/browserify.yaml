@@ -1,5 +1,6 @@
 dist: &DIST
   src:
+    - "./node_modules/qmg-angular/angular-modules/**/*.js"
     - "./app/js/**/*.js"
   dest: "./dist/js/app.js"
   options:
@@ -11,4 +12,5 @@ dist: &DIST
 instrumented:
   <<: *DIST
   src:
+    - "./node_modules/qmg-angular/angular-modules/**/*.js"
     - "./coverage/app/js/**/*.js"

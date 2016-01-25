@@ -1,0 +1,8 @@
+unit:
+    options:
+        data:
+            generatedFileWarning: ""
+            googleTagManagerId: "GTM-TESTING"
+    files:
+        "dist/js/config-unit-tests.js":
+            - "config.tpl"
